@@ -1,16 +1,31 @@
-# React + Vite
+រង្វិលជុំនៃការទាញយកទិន្នន័យ:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+អ្នកប្រើប្រាស់ → សរសេរទីក្រុង → ចុចស្វែងរក
+      ↓
+Navbar → បញ្ជូនទីក្រុងទៅ App.jsx
+      ↓
+App.jsx → ហៅ fetchWeatherData(cityName)
+      ↓
+fetchWeatherData → ផ្ញើសំណើទៅ OpenWeatherMap
+      ↓
+OpenWeatherMap → ឆ្លើយតបទិន្នន័យ JSON
+      ↓
+fetchWeatherData → បំលែងទិន្នន័យទៅជា Object
+      ↓
+App.jsx → ផ្ញើទិន្នន័យទៅ WeatherCard និង ForecastDay
+      ↓
+WeatherCard + ForecastDay → បង្ហាញទិន្នន័យលើអេក្រង់
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ឧទាហរណ៍ពេលស្វែងរក "សៀមរាប"
+text
+១. អ្នកសរសេរ: "សៀមរាប"
+២. ចុច: "ស្វែងរក"
+៣. App.jsx ហៅ: fetchWeatherData("សៀមរាប")
+៤. ផ្ញើសំណើទៅ: https://api.openweathermap.org/data/2.5/weather?q=សៀមរាប&units=metric&appid=...
+៥. API ឆ្លើយតប: { "name": "Siem Reap", "main": { "temp": 31 }, ... }
+៦. App.jsx ទទួលទិន្នន័យ
+៧. WeatherCard បង្ហាញ: សៀមរាប, ៣១°C, ...
+៨. ForecastDay បង្ហាញ: ថ្ងៃទី ១, ២, ៣, ៤, ៥
