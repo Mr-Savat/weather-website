@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
-import WeatherCard from './components/WeatherCard';
-import ForecastDay from './components/ForecastDay';
-import LoadingSpinner from './components/LoadingSpinner';
-import ErrorMessage from './components/ErrorMessage';
-import Footer from './components/Footer';
+import { Navbar, WeatherCard, ForecastDay, LoadingSpinner, ErrorMessage, Footer } from "./components"
 
 function App() {
   const [city, setCity] = useState('Phnom Penh');
@@ -140,7 +135,6 @@ function App() {
         </div>
 
 
-        {/* Footer */}
         <Footer />
 
       </div>
