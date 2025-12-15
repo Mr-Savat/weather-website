@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import headlogo from "../assets/headlogo.jpg"
 
 function Navbar({ onSearch, initialCity = 'Phnom Penh' }) {
     const [city, setCity] = useState(initialCity);
@@ -20,9 +21,9 @@ function Navbar({ onSearch, initialCity = 'Phnom Penh' }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row items-center justify-between py-4 gap-4">
                     {/* Title */}
-                    <div className="flex items-center">
-                        <div className="text-2xl mr-2">🌤️</div>
-                        <h1 className="text-xl sm:text-2xl font-bold text-blue-600">
+                    <div className="flex items-center justify-center">
+                        <div className="text-2xl mr-2 mt-1"><img src={headlogo} alt="headlogo"  className="w-15 h-15"  /></div>
+                        <h1 className="text-xl sm:text-2xl font-bold text-blue-700">
                             ព្យាករណ៍អាកាសធាតុ
                         </h1>
                     </div>
@@ -36,7 +37,7 @@ function Navbar({ onSearch, initialCity = 'Phnom Penh' }) {
                                     value={city}
                                     onChange={(e) => setCity(e.target.value)}
                                     onKeyPress={handleKeyPress}
-                                    placeholder="ស្វែងរកទីក្រុង..."
+                                    placeholder="ស្វែងរកទីក្រុង...."
                                     className="w-full px-4 py-2 border-2 border-blue-400 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
                                 />
                             </div>

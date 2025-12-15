@@ -35,7 +35,7 @@ function App() {
       );
 
       if (!currentResponse.ok) {
-        throw new Error('រកមិនឃើញទីក្រុង! សូមព្យាយាមម្តងទៀត។');
+        throw new Error('រកមិនឃើញទីក្រុង សូមព្យាយាមម្តងទៀត!');
       }
 
       const currentData = await currentResponse.json();
